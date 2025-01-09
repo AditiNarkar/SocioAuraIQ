@@ -6,8 +6,7 @@ export default function Dashboard({ children }) {
     <>
       <Header />
       <div className="flex h-screen">
-        <div className="w-1/4 bg-gray-800 bg-opacity-50 text-white p-4 fixed h-full backdrop-blur-lg shadow-lg">
-          <h2 className="text-xl font-bold mb-4">Dashboard</h2>
+        <div className="w-[250px] bg-gray-800 bg-opacity-50 text-white p-4 fixed h-full backdrop-blur-lg shadow-lg">
           <ul>
             <NavItem label="Overview" icon="fas fa-home" />
             <NavItem label="Analytics" icon="fas fa-chart-bar" />

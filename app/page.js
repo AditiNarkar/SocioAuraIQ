@@ -22,7 +22,7 @@ export default function Home() {
                     <div className="main-title" style={{ fontSize: "3.5rem" }}>
                         AuroraScope: Shedding light on the social horizon...
                     </div>
-                    <input type="text" style={{ width: "100%", fontSize: 20, height: 50, marginBottom: 30 }} />
+                    <input type="text" style={{ padding: 5 , width: "100%", fontSize: 20, height: 50, marginBottom: 30 }} placeholder="Enter a link to reveal its social aura..." />
                     <button className="button-64" role="button"><span className="text">Submit</span></button>
                 </div>
             </div>
