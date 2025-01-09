@@ -3,7 +3,7 @@ export default function ChatBot() {
         <>
             <div className="container-fluid h-100">
                 <div className="row justify-content-center h-100">
-                    <div className="col-md-8 col-xl-8 chat">
+                    <div className="col-md-4 col-xl-8 chat !m-5">
                         <div className="main-title">
                             AuroraScope: Shedding light on the social horizon...
                         </div>
