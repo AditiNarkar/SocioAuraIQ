@@ -33,6 +33,25 @@ html {
   );
 }
 
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Make sure the video covers the screen without distortion */
+  z-index: 0; /* Place the video behind the content */
+}
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value (0.5) for desired dimness */
+  z-index: 1; /* Place it above the video but behind the content */
+}
+
 .chat {
   margin-top: auto;
   margin-bottom: auto;
