@@ -10,10 +10,11 @@ export default function ChatBot() {
                         <div className="card">
                             <div className="card-header msg_head">
                                 <div className="d-flex bd-highlight">
-                                    <div className="img_cont">
+                                    <div className="img_cont" style={{ width: 100 }}>
                                         <img
                                             src="logo1.jpeg"
                                             className="rounded-circle user_img"
+
                                         />
                                         <span className="online_icon"></span>
                                     </div>

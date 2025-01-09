@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "AuroraScope",
+  title: "AuroraScope: SocioAuraIQ",
   description: "Shedding light on the social horizon",
 };
 
