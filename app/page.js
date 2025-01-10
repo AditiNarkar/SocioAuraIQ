@@ -24,9 +24,12 @@ export default function Home() {
                     </div>
                     {/* <input type="text" style={{ padding: 5 , width: "100%", fontSize: 20, height: 50, marginBottom: 30 }} placeholder="Enter a link to reveal its social aura..." /> */}
                     <div className="input-group mb-3">
-                        <input type="file" className="form-control" id="inputGroupFile01" style={{ padding: 5 , width: "100%", fontSize: 20, height: 50, marginBottom: 30 }} placeholder="Enter a link to reveal its social aura..."  />
+                        <input type="file" className="form-control" id="inputGroupFile01" style={{ padding: 5, width: "100%", fontSize: 20, height: 50, marginBottom: 30 }} placeholder="Enter a link to reveal its social aura..." />
                     </div>
-                    <button className="button-64" role="button"><span className="text">Submit</span></button>
+                    <div style={{ display:"flex", gap:10 }}>
+                        <button className="button-64" role="button"><span className="text">Submit</span></button>
+                        <button className="button-64" role="button"><span className="text">SocioAuraBot</span></button>
+                    </div>
                 </div>
             </div>
         </div>

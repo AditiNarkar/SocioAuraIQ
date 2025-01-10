@@ -20,16 +20,6 @@ export default function EngagementInsights() {
         ["2025-01-05", 4.5],
     ];
 
-    const heatmapData = [
-        ["Day", "Hour", "Engagement"],
-        ["Monday", "10 AM", 20],
-        ["Monday", "12 PM", 35],
-        ["Tuesday", "10 AM", 50],
-        ["Tuesday", "12 PM", 70],
-        ["Wednesday", "10 AM", 40],
-        ["Wednesday", "12 PM", 60],
-    ];
-
     const tableData = [
         ["Post", "Engagement Rate (%)", "Likes", "Comments", "Shares"],
         ["Post 1", "5%", 100, 20, 10],
