@@ -3,9 +3,9 @@ import React, { useState, useRef, useEffect } from 'react';
 
 const ChatBot = () => {
     const [messages, setMessages] = useState([
-        { 
-            text: "Hi! I'm Aurora, your social insights companion. How can I help you today?", 
-            isUser: false 
+        {
+            text: "Hi! I'm Aurora, your social insights companion. How can I help you today?",
+            isUser: false
         }
     ]);
     const [inputMessage, setInputMessage] = useState('');
@@ -46,8 +46,8 @@ const ChatBot = () => {
             }
 
             const data = await response.json();
-            console.log("Data" , data)
-            
+            console.log("Data", data)
+
             let messageText;
             if (data.output && typeof data.output === 'string') {
                 messageText = data.output;
@@ -56,14 +56,14 @@ const ChatBot = () => {
             } else {
                 messageText = "Received an unexpected response format";
             }
-            
+
             setError(null);
             return { output: messageText };
         } catch (error) {
             console.error('Error:', error);
             setError(error.message);
-            return { 
-                output: "I'm having trouble connecting right now. Please try again in a moment." 
+            return {
+                output: "I'm having trouble connecting right now. Please try again in a moment."
             };
         }
     }
@@ -78,9 +78,9 @@ const ChatBot = () => {
         setError(null);
 
         // Add user message
-        setMessages(prev => [...prev, { 
-            text: userMessage, 
-            isUser: true 
+        setMessages(prev => [...prev, {
+            text: userMessage,
+            isUser: true
         }]);
 
         setIsLoading(true);
@@ -90,14 +90,14 @@ const ChatBot = () => {
             const response = await callAPI(userMessage);
 
             // Add bot response
-            setMessages(prev => [...prev, { 
-                text: response.output || "I couldn't process that properly. Could you try rephrasing?", 
-                isUser: false 
+            setMessages(prev => [...prev, {
+                text: response.output || "I couldn't process that properly. Could you try rephrasing?",
+                isUser: false
             }]);
         } catch (error) {
             console.error('Chat error:', error);
-            setMessages(prev => [...prev, { 
-                text: "I'm experiencing technical difficulties. Please try again later.", 
+            setMessages(prev => [...prev, {
+                text: "I'm experiencing technical difficulties. Please try again later.",
                 isUser: false,
                 isError: true
             }]);
@@ -130,65 +130,64 @@ const ChatBot = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div 
-                                id="messageFormeight" 
-                                className="card-body msg_card_body" 
+                            <div
+                                id="messageFormeight"
+                                className="card-body msg_card_body"
                                 ref={messageListRef}
                             >
                                 {messages.map((message, index) => (
-                                    <div 
-                                        key={index} 
+                                    <div
+                                        key={index}
                                         className={`flex ${message.isUser ? 'justify-end' : 'justify-start'} mb-2`}
                                     >
                                         <div
                                             className={`message ${message.isUser ? 'bg-gray-500' : 'bg-gray-500'} text-white px-2 pt-2  rounded-lg max-w-md break-words`}
-                                            >
+                                        >
                                             <p className="text-sm leading-normal">{message.text}</p>
                                         </div>
                                     </div>
                                 ))}
                                 {isLoading && (
                                     <div className="message bot-msg text-white">
-                                      
-                                      <div className="flex items-end space-x-2">
-                                        {/* Logo Container */}
-                                        <div
+
+                                        <div className="flex items-end space-x-2">
+                                            {/* Logo Container */}
+                                            <div
                                                 className="img_cont relative"
                                                 style={{ width: '50px', height: '50px' }}
                                             >
                                                 <img
-                                                src="logo1.jpeg"
-                                                alt="Logo"
-                                                className="rounded-full object-cover w-full h-full"
+                                                    src="logo1.jpeg"
+                                                    alt="Logo"
+                                                    className="rounded-full object-cover w-full h-full"
                                                 />
                                                 <span
-                                                className="online_icon absolute  bg-green-500 rounded-full"
-                                                style={{
-                                                    width: '10px',
-                                                    height: '10px',
-                                                    bottom: '0px', // Positioned at the bottom of the container
-                                                    right: '-12px', // Adding space between dot and logo
-                                                  }}
+                                                    className="online_icon absolute  bg-green-500 rounded-full"
+                                                    style={{
+                                                        width: '10px',
+                                                        height: '10px',
+                                                        bottom: '0px', // Positioned at the bottom of the container
+                                                    }}
                                                 ></span>
                                             </div>
 
                                             {/* Thinking Text and Dots */}
                                             <div className="flex items-baseline  -mb-5" >
                                                 <p className="text-white text-sm font-medium flex items-baseline ml-3 ">
-                                                is thinking 
-                                                <span className="ml-1" style={{ position: 'relative', top: '2px' }}>🤔</span>
+                                                    is thinking
+                                                    <span className="ml-1" style={{ position: 'relative', top: '2px' }}>🤔</span>
                                                 </p>
                                                 <div className="flex items-baseline space-x-1 ml-2">
-                                                <span className="animate-pulse w-1.5 h-1.5 bg-white rounded-full"></span>
-                                                <span className="animate-pulse w-1.5 h-1.5 bg-white rounded-full delay-200"></span>
-                                                <span className="animate-pulse w-1.5 h-1.5 bg-white rounded-full delay-400"></span>
+                                                    <span className="animate-pulse w-1.5 h-1.5 bg-white rounded-full"></span>
+                                                    <span className="animate-pulse w-1.5 h-1.5 bg-white rounded-full delay-200"></span>
+                                                    <span className="animate-pulse w-1.5 h-1.5 bg-white rounded-full delay-400"></span>
                                                 </div>
                                             </div>
                                         </div>
 
 
-                                            
-                                </div>
+
+                                    </div>
                                 )}
                                 {error && (
                                     <div className="message bot-msg text-white">
