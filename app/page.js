@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
     return (
         <div className="container-fluid h-100">
@@ -26,9 +28,15 @@ export default function Home() {
                     <div className="input-group mb-3">
                         <input type="file" className="form-control" id="inputGroupFile01" style={{ padding: 5, width: "100%", fontSize: 20, height: 50, marginBottom: 30 }} placeholder="Enter a link to reveal its social aura..." />
                     </div>
-                    <div style={{ display:"flex", gap:10 }}>
-                        <button className="button-64" role="button"><span className="text">Submit</span></button>
-                        <button className="button-64" role="button"><span className="text">SocioAuraBot</span></button>
+                    <div style={{ display: "flex", gap: 10 }}>
+                        <Link href="/dashboard" passHref>
+                            <button className="button-64" role="button">
+                                <span className="text">Submit</span>
+                            </button>
+                        </Link>
+                        <Link href="/chatbot" passHref>
+                            <button className="button-64" role="button"><span className="text">SocioAuraBot</span></button>
+                        </Link>
                     </div>
                 </div>
             </div>
