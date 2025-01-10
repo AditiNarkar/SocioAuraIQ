@@ -8,12 +8,20 @@ module.exports = {
   ],
   theme: {
   	extend: {
+		boxShadow: {
+			neonGreen: '0 0 4px #39ff14, 0 0 6px #39ff14',
+			neonBlue: '0 0 4px #00f6ff, 0 0 6px #00f6ff',
+		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		},
   		colors: {
+			neonGreen: '#39ff14 !important',
+			neonBlue: '#00f6ff',
+			chatGreen: '#083316',
+			chatBlue: '#125658',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {

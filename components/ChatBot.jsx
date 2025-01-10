@@ -141,7 +141,7 @@ const ChatBot = () => {
                                         className={`flex ${message.isUser ? 'justify-end' : 'justify-start'} mb-2`}
                                     >
                                         <div
-                                            className={`message ${message.isUser ? 'bg-gray-500' : 'bg-gray-500'} text-white px-2 pt-2  rounded-lg max-w-md break-words`}
+                                            className={`message ${message.isUser ? ' bg-chatBlue bg-opacity-50 border-neonBlue shadow-neonBlue' : 'bg-chatGreen bg-opacity-50 border-neonGreen shadow-neonGreen'} text-white px-2 pt-2  rounded-lg max-w-md break-words`}
                                         >
                                             <p className="text-sm leading-normal">{message.text}</p>
                                         </div>
